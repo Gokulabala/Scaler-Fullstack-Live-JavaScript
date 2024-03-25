@@ -4,7 +4,7 @@
 // of characters which reads the same backward as forward 
 // (ignoring spaces, punctuation, and capitalization).
 
-const { on } = require("nodemon");
+
 
 // Example:
 
@@ -16,7 +16,7 @@ const { on } = require("nodemon");
 
 //solution
 
-let str = "M!adA@m $9@-0."
+let str = "M!aerA@m $9@-0."
 
 function isPalindrome(str) {
     // Write your code here
@@ -49,4 +49,5 @@ function isPalindrome(str) {
     return true;
   }
 
-  console.log(isPalindrome(str))
+  let answer = isPalindrome(str)
+  console.log(answer)
