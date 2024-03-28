@@ -11,7 +11,7 @@
 // A number representing the first negative number in the array or undefined if there are no negative numbers.
 
 //Solution
-let numbers = [1,2,3,-5,6,-9]
+let numbers = [1,2,-3,-5,6,-9]
 function findFirstNegative(numbers) {
     // Write your code here
     // return the result
@@ -19,6 +19,7 @@ function findFirstNegative(numbers) {
         return number <0;
     })
     return ans;
+    // return numbers.find((number) => number<0);
   }
 
   console.log(findFirstNegative(numbers))
