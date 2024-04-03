@@ -26,7 +26,7 @@ function convertCurrency(amount, sourceCurrency, targetCurrency) {
 
     return new Promise((res,rej)=>{
         if(exchangeRates[sourceCurrency] && exchangeRates[targetCurrency]){
-            let ans = (amount* exchangeRates[targetCurrency]).toFixed(2)
+            let ans = (amount* exchangeRates[targetCurrency] / exchangeRates[sourceCurrency]).toFixed(2)
             console.log(ans)
             res(ans)
         }
@@ -36,6 +36,6 @@ function convertCurrency(amount, sourceCurrency, targetCurrency) {
     })
 }
 
-convertCurrency(100,'USD','EUR')
+convertCurrency(100,'EUR','GBP')
 .then(result => console.log(`Converted amount: ${result} EUR`))
 .catch(error => console.error(error));
