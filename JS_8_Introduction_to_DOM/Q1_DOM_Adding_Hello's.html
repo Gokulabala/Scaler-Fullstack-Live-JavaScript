@@ -1,0 +1,45 @@
+<!-- Q1. DOM Q1: Adding Hello's
+
+Raw Problem
+Write a program in JS to do the below mentioned task:
+
+When the button is clicked, append a <div> element, containing inner text 'Hello', as Child for the <body> element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>say Hello</button>
+    <script>
+        // Write your JS program here ====
+        const btn = document.querySelector("button")
+        // console.log(btn)
+        btn.addEventListener('click', ()=>{
+            // console.log('button is clicked')
+            const newDiv = document.createElement('div')
+            // console.log(newDiv)
+            newDiv.innerText = 'Hello'
+            // console.log(newDiv)
+            
+            const body = document.querySelector('body')
+            body.appendChild(newDiv)
+
+        })
+    </script>
+</body>
+</html>
