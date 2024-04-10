@@ -1,0 +1,67 @@
+<!-- Q2. DOM Q5: Mouse in the jail
+Raw Problem
+Write a JavaScript program to perform the following task:
+
+You are given an empty cell.
+Whenever the mouse enters the cell,
+a jail should be drawn over it.
+And it should be removed once it leaves.
+
+URL of the image: https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/055/850/original/jail.jpg?1699030242
+
+
+NOTE :
+Here cursor is referred to as the mouse and the box as the empty cell.
+To draw the jail:
+Use the background image provided and set it as the background for the cell when the mouse enters the cell.
+
+Use the below-mentioned method to set the image as background:
+element.style.background = url(image_src) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cell {
+            border: 1px solid;
+            margin: auto;
+            margin-top: 10rem;
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="cell"></div>
+
+    
+    <script>
+        // Write your JS program here
+        const mouse = document.querySelector('.cell')
+        console.log(mouse)
+
+        mouse.addEventListener('mouseover', ()=>{
+            mouse.style.background = "url(https://d2beiqkhq929f0.cloudfront.net/public_assets/assets/000/055/850/original/jail.jpg?1699030242)"
+        })
+
+        mouse.addEventListener('mouseleave', ()=>{
+            mouse.style.background = ""
+        })
+    </script>
+    
+</body>
+</html>
