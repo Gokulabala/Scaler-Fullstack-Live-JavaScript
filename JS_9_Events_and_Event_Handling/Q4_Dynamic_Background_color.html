@@ -1,0 +1,70 @@
+<!-- Q1. DOM Q22: Dynamic Background Color
+Raw Problem
+**Raw Problem**
+Without using media queries do the following things:
+1- For desktop sizes, i.e. window.innerWidth > 1024, make the background of above div 'red'
+2- For tablet sizes, i.e. window.innerWidth > 600 & <= 1024, make the background of above div 'blue'
+3- For mobile sizes, i.e. window.innerWidth <= 600, make the background of above div 'green'
+
+Note:
+Please use JS to enable the above feature whenever the window resizes.
+Online IDE might not show changes when resized due to its limitations. Use your local IDE to test your code before submitting.
+Submissions would work if the code is correct. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+        }
+        div {
+          height: 100vh;
+          width: 100vw;
+          background: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // Write your solution here ================================
+        //approach 1
+        // const screen = document.querySelector('div')
+        // // console.log(screen)
+        // const size = screen.getBoundingClientRect();
+        // console.log(size)
+        
+        //     if(size.width > 1024){
+        //         screen.style.background = 'red'
+        //     }
+        //     else if(size.width > 600 && size.width<=1024){
+        //         screen.style.background = "blue"
+        //     }
+        //     else if(size.width <=600){
+        //         screen.style.background = "green"
+        //     }
+        
+        //approach 2
+        const screen = document.querySelector('div')
+        // console.log(screen)
+        
+        const resize = () =>{
+            if(window.innerWidth > 1024){
+                screen.style.background = 'red'
+            }
+            else if(window.innerWidth > 600 && window.innerWidth<=1024){
+                screen.style.background = "blue"
+            }
+            else if(window.innerWidth <=600){
+                screen.style.background = "green"
+            }
+        }
+        resize()
+        
+    </script>
+</body>
+</html>
