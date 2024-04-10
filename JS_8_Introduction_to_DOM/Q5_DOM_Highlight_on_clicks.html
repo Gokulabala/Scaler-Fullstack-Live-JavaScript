@@ -1,0 +1,64 @@
+<!-- Q2. DOM Q14: Highlight On Clicks
+
+Raw Problem
+Write a program in JavaScript,
+that implements the following behaviour on the above p tags:
+
+1. single clicking highlights them with red color
+2. double clicking highlights them with green color
+3. triple removes the highlights
+
+Note:
+Here highlight means to set the background of the element to a desired color. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at quod illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at quod illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at quod illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+      </p>
+      <script>
+        // WRITE THE JS PROGRAM HERE ====================================================================
+        const para = document.querySelectorAll('p')
+        console.log(para)
+        for(let i = 0;i<para.length;i++){
+            para[i].addEventListener('click', ()=>{
+                para[i].style.backgroundColor = 'red'
+            })
+        }
+        for(let i = 0;i<para.length;i++){
+            para[i].addEventListener('dblclick',()=>{
+                para[i].style.backgroundColor = 'green'
+            })
+        }
+        for(let i = 0;i<para.length;i++){
+            para[i].addEventListener('click',(e)=>{
+                
+                if(e.detail === 3){
+                    console.log(e)
+                    para[i].style.backgroundColor = ''
+                }
+            })
+        }
+      </script>
+</body>
+</html>
