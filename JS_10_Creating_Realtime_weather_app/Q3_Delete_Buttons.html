@@ -1,0 +1,76 @@
+<!-- Q3. DOM Q10: Delete Buttons
+Raw Problem
+In the HTML provided, there is a list with every item containing an individual delete button and a remove all button on top of the list.
+
+Write a JavaScript program that performs the following tasks:
+
+Task 1:
+Make all the individual delete buttons work.
+Set the list item's (li element) display style property as 'none'.
+
+Task 2:
+Make the Remove All button work.
+Set the entire list's (ul element) display style property as 'none'. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Buttons</title>
+</head>
+<body>
+    <button id="all">Remove All</button>
+    <ul>
+        <li>
+            <p>Task - 1</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 2</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 3</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 4</p>
+            <button>delete</button>
+        </li>
+    </ul>
+    <script>
+        // Write your JS program here =========
+
+        const removeAllBtn = document.querySelector('#all')
+        
+        removeAllBtn.addEventListener('click',()=>{
+            const allTasks = document.querySelector('ul')
+            // console.log(allTasks)
+            allTasks.style.display = 'none'
+        })
+
+        const btn = document.querySelectorAll('li')
+        // console.log(btn)
+        for(let i=0;i<btn.length;i++){
+            btn[i].addEventListener('click',()=>{
+                btn[i].style.display = 'none'
+        })  
+            
+        }
+        
+
+    </script>
+    
+</body>
+</html>
