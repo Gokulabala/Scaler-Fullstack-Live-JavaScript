@@ -1,0 +1,55 @@
+<!-- Q2. DOM Q21: Deleting Item from List
+
+Raw Problem
+Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
+
+The HTML has majorly 3 components in following hierarchy:
+ul > li > a
+
+Here,
+
+1. ul#listToDestroy:
+1.1. contains the entire list
+1.2. has 5 li tags with unique id.
+
+2. li:
+2.1. contains an anchor tag <a> in it.
+
+3. a:
+3.1. contains unique innerText in it.
+
+
+Your task is to:
+1. Whenevr clicked the specific list item, <li> element, from the list ul#listToDestroy.
+2. The new list should have list items 1 less than the previous state.
+3. Unique ID and innerText should remain intact for each list item. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting Item From List</title>
+</head>
+<body>
+    <ul id="listToDestroy">
+        <li id = "Item-1"><a href="#">first item</a></li>
+        <li id = "Item-2"><a href="#">second item</a></li>
+        <li id = "Item-3"><a href="#">third item</a></li>
+        <li id = "Item-4"><a href="#">forth item</a></li>
+        <li id = "Item-5"><a href="#">Fifth item</a></li>
+      </ul>
+      
+      <script>
+        // Q Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
+        const ListItems = document.querySelectorAll('li')
+        console.log(ListItems)
+
+        for(let i=0;i<ListItems.length;i++){
+            ListItems[i].addEventListener('click',()=>{
+                ListItems[i].remove()
+            })
+        }
+      </script>
+</body>
+</html>
