@@ -1,0 +1,106 @@
+<!-- Q2. Kanban Q2: Making Input Modal (HTML/CSS)
+Raw Problem
+Your task is to write CSS for the modal to create a new ticket.
+
+You have been given HTML and CSS boilerplate code and you have to apply the below CSS rules:
+
+.modal-cont should have:
+1. display of flex
+2. background color of 'lightblue'
+3. height of 300px and width of 500px
+
+.priority-colors-container should have:
+1. display of flex
+2. flex direction of column
+3. align items is set to 'center'
+4. justify content is set to 'space-around' -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.textArea-cont {
+    height: 100%;
+    width: 75%;
+    background-color: #dfe4ea;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.priority-colors-container {
+    height: 100%;
+    width: 25%;
+    background-color: #4b4b4b
+}
+
+.priority-color {
+    height: 3rem;
+    width: 5rem;
+}
+
+.lightpink {
+    background-color: lightpink;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.black {
+    background-color: black;
+}
+        /* Write CSS here ======== */
+        .modal-cont{
+            display: flex;
+            background-color: lightblue;
+            height: 300px;
+            width: 500px;
+
+        }
+        .priority-colors-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal-cont">
+
+        <textarea class="textArea-cont" placeholder="Enter Your Task" spellcheck="false">
+
+           </textarea>
+
+
+        <div class="priority-colors-container">
+            <div class="lightpink priority-color"></div>
+            <div class="lightgreen priority-color"></div>
+            <div class="lightblue priority-color"></div>
+            <div class="black priority-color active"></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
