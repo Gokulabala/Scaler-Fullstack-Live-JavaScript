@@ -1,0 +1,73 @@
+<!-- Q2. Kanban Q10: Creating ticketsDB in localstorage
+You need to write JS program to
+Create a Storage Object names 'ticketsDB' in Browser's localstorage.
+
+The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions. 
+The following snippet accesses the current domain's local Storage object and adds a data item to it using Storage.setItem().
+
+localStorage.setItem("myCat", "Tom");
+You need to use stringify the Array of Objects 'ticketsArr' provided to you in script.js file
+You can use JSON.stringify() method to acheive this. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban CreatingTicketsDB in LocalStorage</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <div class="toolbox-cont">
+        <div class="toolbox-priority-cont">
+            <div class="lightpink color"></div>
+            <div class="lightgreen color"></div>
+            <div class="lightblue color"></div>
+            <div class="black color"></div>
+        </div>
+
+        <div class="action-btn-cont">
+            <div class="add-btn">
+                <img src="plus-logo.png" alt="color-logo" height="50%">
+            </div>
+            <div class="remove-btn">
+                <img src="cross-logo.png" alt="color-logo" height="50%">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-cont">
+        <div class="ticket-cont">
+            <div class="ticket-color lightpink"></div>
+            <div class="ticket-id">#0</div>
+            <div class="task-area"> this is task 1</div>
+            <div class="ticket-lock">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal-cont">
+
+        <textarea class="textArea-cont" placeholder="Enter Your Task" spellcheck="false">
+
+       </textarea>
+
+
+        <div class="priority-colors-container">
+            <div class="lightpink priority-color"></div>
+            <div class="lightgreen priority-color"></div>
+            <div class="lightblue priority-color"></div>
+            <div class="black priority-color active"></div>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
