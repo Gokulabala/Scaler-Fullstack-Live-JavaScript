@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Write CSS Code here */
+
+#sidebar{
+    background-color: #34495e;
+    color: white;
+    padding: 15px 30px;
+    width: 250px;
+    transition: width 0.3s;
+    position: fixed;  
+    height: 100vh;
+}
+#sidebar.collapsed{
+    width: 80px;
+}
+
+#toggle-button{
+    background-color:  #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-button:hover{
+    background-color: #c0392b;
+}
+
+#main-content{
+    background-color: #f1c40f;
+    padding: 80px;
+    transition: margin-left 0.3s;
+    margin-left: 250px;
+    height: 100vh;  
+    color: white;
+}
+
+#main-content.expanded{
+    margin-left: 80px;
+}

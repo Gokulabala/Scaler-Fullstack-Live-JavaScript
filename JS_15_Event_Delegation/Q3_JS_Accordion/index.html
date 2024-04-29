@@ -1,0 +1,44 @@
+<!-- Q1. JS Accordion
+
+Create an interactive accordion component using HTML, CSS, and JavaScript. An accordion is a vertically stacked list of items, each with a header and a content section. When a user clicks on the header, the associated content section should either collapse or expand.
+
+Your task is to implement the JavaScript functionality to make the accordion work as expected. Each accordion header is a button that, when clicked, should toggle the display of the content section. Initially, all content sections should be hidden.
+
+NOTE:
+
+You have to make the accordion-content visible using the display: block property and hidden using the display: none property. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Accordion</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-button">Section 1</button>
+            <div class="accordion-content">
+                <p>This is the content for section 1.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Section 2</button>
+            <div class="accordion-content">
+                <p>This is the content for section 2.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">Section 3</button>
+            <div class="accordion-content">
+                <p>This is the content for section 3.</p>
+            </div>
+        </div>
+        <!-- Add more sections as needed -->
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
