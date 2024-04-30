@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
+    <!-- <style>
+        body, html {
+            height: 3000px; /* Ensure there's enough space to scroll */
+        }
+        .status {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+        }
+    </style> -->
+
+    <style>
+        .grand-parent {
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        .parent {
+            border: 2px solid red;
+            padding: 20px;
+        }
+
+        .child {
+            border: 2px solid yellowgreen;
+            padding: 10px;
+        }
+    </style>
+
 </head>
 <body>
-    <p>Closure</p>
+    <!-- <input type="text" name="" id="inputField" autofocus> -->
+    <!-- <div class="status">
+        Scroll position: <span id="scrollPosition">0</span>
+    </div> -->
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="child">
+                50
+                <p>
+                    I am a P tag
+                </p>
+            </div>
+        </div>
+    </div>
 
     <script src="./index.js"></script>
 </body>

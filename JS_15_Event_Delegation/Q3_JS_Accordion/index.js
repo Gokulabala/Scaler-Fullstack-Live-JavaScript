@@ -8,14 +8,14 @@ accordionBtn.forEach((accordionItem)=>{
     accordionItem.addEventListener('click',()=>{
         // const idx = e.target
         // console.log(idx)
-        
-        let content = accordionItem.querySelector('.accordion-content')
-        if(!flag){
-            flag = !flag
+        flag = !flag
+        const content = accordionItem.querySelector('.accordion-content')
+        if(flag){
+            
             content.style.display = 'block'
         }
         else{
-            flag = !flag
+            // flag = !flag
             content.style.display = 'none'
         }
     })
