@@ -31,3 +31,4 @@ let obj = {
     }
 }
 obj.nested()
+//output : local object

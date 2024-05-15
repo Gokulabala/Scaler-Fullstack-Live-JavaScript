@@ -136,3 +136,31 @@ grandChild.addEventListener("click", (e) => {
 //     }
     
 // })
+
+//class and constuctors
+function Pizza(toppings, size, crust){
+    this.toppings = toppings
+    this.size = size
+    this.crust = crust
+
+    this.desribe = function() {
+        console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
+    }
+}
+
+const order1 = new Pizza(['cheese', 'olive'], 'medium', 'thin')
+const order2 = new Pizza(["veggies"], "small", "thin")
+order1.desribe()
+order2.desribe()
+
+
+class MyPizza{
+    constructor(toppings,size,crust){
+        this.toppings = toppings
+        this.size = size
+        this.crust = crust
+    }
+    describe(){
+        console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
+    }
+}
