@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Method Example</title>
+</head>
+<body>
+    <button id="introduceButton">Introduce Alice</button>
+
+    <script>
+        const alice = {
+            name: "Alice",
+            age: 20,
+            introduce: function() {
+                console.log(`My name is ${this.name} & I'm ${this.age} years old.`)
+            }
+        }
+
+        const btn = document.querySelector('#introduceButton')
+
+        const wonka = {
+            name : "Willy Wonka",
+            age : 100
+        }
+        const aliceFn = alice.introduce.bind(alice)
+        const wonkaFn = alice.introduce.bind(wonka)
+        btn.addEventListener('click',wonkaFn)
+
+        </script>
+</body>
+</html>
