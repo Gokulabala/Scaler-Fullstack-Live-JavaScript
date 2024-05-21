@@ -14,30 +14,30 @@
 
 
 //Capturing and Bubbling phase
-const grandParent = document.querySelector(".grand-parent")
-const parent = document.querySelector(".parent")
-const child = document.querySelector(".child")
-const grandChild = document.querySelector("p")
+// const grandParent = document.querySelector(".grand-parent")
+// const parent = document.querySelector(".parent")
+// const child = document.querySelector(".child")
+// const grandChild = document.querySelector("p")
 
-grandParent.addEventListener("click", (e) => {
-    console.log("Grandparent was clicked")
+// grandParent.addEventListener("click", (e) => {
+//     console.log("Grandparent was clicked")
     
-})
+// })
 
-parent.addEventListener("click", (e) => {
-    console.log("Parent was clicked")
+// parent.addEventListener("click", (e) => {
+//     console.log("Parent was clicked")
     
-})
+// })
 
-child.addEventListener("click", (e) => {
-    console.log("Child was clicked")
-    // e.stopPropagation()
-})
+// child.addEventListener("click", (e) => {
+//     console.log("Child was clicked")
+//     // e.stopPropagation()
+// })
 
-grandChild.addEventListener("click", (e) => {
-    console.log("GrandChild was clicked")
+// grandChild.addEventListener("click", (e) => {
+//     console.log("GrandChild was clicked")
     
-})
+// })
 
 
 
@@ -138,29 +138,40 @@ grandChild.addEventListener("click", (e) => {
 // })
 
 //class and constuctors
-function Pizza(toppings, size, crust){
-    this.toppings = toppings
-    this.size = size
-    this.crust = crust
+// function Pizza(toppings, size, crust){
+//     this.toppings = toppings
+//     this.size = size
+//     this.crust = crust
 
-    this.desribe = function() {
-        console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
+//     this.desribe = function() {
+//         console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
+//     }
+// }
+
+// const order1 = new Pizza(['cheese', 'olive'], 'medium', 'thin')
+// const order2 = new Pizza(["veggies"], "small", "thin")
+// order1.desribe()
+// order2.desribe()
+
+
+// class MyPizza{
+//     constructor(toppings,size,crust){
+//         this.toppings = toppings
+//         this.size = size
+//         this.crust = crust
+//     }
+//     describe(){
+//         console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
+//     }
+// }
+
+
+var counter = (function(){
+    var count = 0
+    return function(){
+        return ++count
     }
-}
+})()
 
-const order1 = new Pizza(['cheese', 'olive'], 'medium', 'thin')
-const order2 = new Pizza(["veggies"], "small", "thin")
-order1.desribe()
-order2.desribe()
-
-
-class MyPizza{
-    constructor(toppings,size,crust){
-        this.toppings = toppings
-        this.size = size
-        this.crust = crust
-    }
-    describe(){
-        console.log(`A pizza of size ${this.size} and crust ${this.crust}`)
-    }
-}
+console.log(counter())
+console.log(counter())
